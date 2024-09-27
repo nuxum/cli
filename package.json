@@ -1,0 +1,25 @@
+{
+  "name": "nuxum-cli",
+  "version": "1.0.0",
+  "description": "A CLI tool for the Nuxum framework",
+  "bin": {
+    "nuxum": "./bin/nuxum.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node ./bin/nuxum.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "ValDesign",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^11.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}

@@ -1,0 +1,6 @@
+# Dirs
+node_modules/
+
+# Files
+*.js
+!templates/*.js

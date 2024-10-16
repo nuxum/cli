@@ -1,4 +1,11 @@
-import { copyFileSync, existsSync, mkdirSync, readdirSync } from 'fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync } from 'fs';
+
+interface IConfiguration {
+  name: string;
+  version: string;
+  source: string;
+  template: 'typescript' | 'javascript';
+}
 
 export function isDirEmpty(dir: string): boolean {
   return readdirSync(dir).length === 0;
@@ -15,4 +22,11 @@ export function cloneDirectory(source: string, destination: string): void {
 
     entry.isDirectory() ? cloneDirectory(sourcePath, destinationPath) : copyFileSync(sourcePath, destinationPath);
   }
+}
+
+export function getConfig(path: string): IConfiguration | null {
+  if (!existsSync(path + '/nuxum.config.json')) return null;
+
+  const config = readFileSync(path + '/nuxum.config.json', 'utf-8');
+  return JSON.parse(config);
 }

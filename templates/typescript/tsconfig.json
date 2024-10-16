@@ -1,19 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
-    "emitDecoratorMetadata": true,
+    "target": "es5",
     "experimentalDecorators": true,
-    "target": "es6",
-    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
     "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true,
-    "noImplicitAny": true,
+    "baseUrl": "./src",
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
     "strict": true,
-  }
+    "skipLibCheck": true,
+  },
 }

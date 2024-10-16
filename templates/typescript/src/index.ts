@@ -1,11 +1,13 @@
-import express from 'express';
-import { Router } from '@nuxum/core';
-import { HelloController } from './controllers/hello.controller';
+import { NuxumApp } from '@nuxum/core';
+import { AppModule } from './modules/app.module';
 
-const app = express();
-new Router(app, {
-  controllers: [HelloController]
-});
-app.listen(process.env.PORT || 3000, () => {
-  console.log('Server is running on http://localhost:3000');
-});
+async function bootstrap() {
+  const app = new NuxumApp({
+    modules: [AppModule],
+    logger: true,
+  });
+
+  await app.listen(process.env.PORT || 3000);
+}
+
+bootstrap();

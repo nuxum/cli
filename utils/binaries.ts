@@ -1,4 +1,3 @@
-import { Command } from 'commander';
 import { existsSync } from 'fs';
 import { join, posix } from 'path';
 import { CommandLoader } from '../commands/command.loader';

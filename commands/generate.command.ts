@@ -91,7 +91,7 @@ function generateModule(name: string, config: IConfiguration, skipApp = false) {
   generateModuleFile(modulePath, name);
 
   if (!skipApp) {
-    const appPath = join(process.cwd(), config.source, 'app.module.ts');
+    const appPath = join(process.cwd(), config.source, 'index.ts');
     addModuleToApp(appPath, name);
   }
 

@@ -1,18 +1,28 @@
 {
-  "name": "nuxum-cli",
+  "name": "@nuxum/cli",
   "version": "1.0.0",
   "description": "A CLI tool for the Nuxum framework",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
-    "nuxum": "./bin/nuxum.js"
+    "nuxum": "bin/nuxum.js"
   },
   "scripts": {
     "build": "tsc",
-    "start": "node ./bin/nuxum.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node bin/nuxum.js"
   },
   "keywords": [],
   "author": "ValDesign",
   "license": "ISC",
+  "homepage": "https://github.com/nuxum/cli#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuxum/cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nuxum/cli/issues"
+  },
   "dependencies": {
     "commander": "^12.1.0",
     "inquirer": "^12.0.0"

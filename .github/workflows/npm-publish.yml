@@ -26,6 +26,6 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Publish to NPM
-        run: pnpm publish --access public
+        run: pnpm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NUXUM_CLI_NPM_TOKEN}}
